@@ -43,8 +43,14 @@ class ProfesorController extends Controller
         ]
     ];
 
-    public
-    function searchWhereId(): array
+    public function index(): array
+    {
+        return [
+            'mensaje' => 'profesores',
+            'data' => $this->profesores
+        ];
+    }
+    public function searchWhereId(): array
     {
         return [
             'mensaje' => 'profesor',
@@ -52,8 +58,7 @@ class ProfesorController extends Controller
         ];
     }
 
-    public
-    function store(): array
+    public function store(): array
     {
         return [
             'mensaje' => 'recurso creado exitosamente',

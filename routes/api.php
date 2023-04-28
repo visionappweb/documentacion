@@ -26,6 +26,7 @@ Route::prefix('universitario')->group(function () {
     });
 
     Route::prefix('profesores')->group(function () {
+        Route::get('profesores', [\App\Http\Controllers\ProfesorController::class, 'index']);
         Route::get('profesor', [\App\Http\Controllers\ProfesorController::class, 'searchWhereId']);
         Route::post('profesor', [\App\Http\Controllers\ProfesorController::class, 'store']);
     });
