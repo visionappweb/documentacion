@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('universitario')->group(function () {
+    Route::prefix('estudiantes')->group(function () {
+        Route::get('estudiante', [\App\Http\Controllers\EstudianteController::class, 'searchWhereId']);
+        Route::post('estudiante', [\App\Http\Controllers\EstudianteController::class, 'store']);
+    });
+});
