@@ -30,6 +30,13 @@ class EstudianteController extends Controller
             "ciudad" => "Bilbao"]
     ];
 
+    public function index(): array
+    {
+        return [
+            'mensaje' => 'estudiantes',
+            'data' => $this->estudiantes
+        ];
+    }
     public function searchWhereId(): array
     {
         return [

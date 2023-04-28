@@ -20,6 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('universitario')->group(function () {
     Route::prefix('estudiantes')->group(function () {
+        Route::get('estudiantes', [\App\Http\Controllers\EstudianteController::class, 'index']);
         Route::get('estudiante', [\App\Http\Controllers\EstudianteController::class, 'searchWhereId']);
         Route::post('estudiante', [\App\Http\Controllers\EstudianteController::class, 'store']);
     });
