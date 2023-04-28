@@ -34,7 +34,7 @@ class EstudianteController extends Controller
     {
         return [
             'mensaje' => 'estudiante',
-            'data' => $this->estudiantes
+            'data' => $this->estudiantes[1]
         ];
     }
 
